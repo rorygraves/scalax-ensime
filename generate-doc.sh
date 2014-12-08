@@ -7,11 +7,12 @@ else
   echo "running pandoc on $1.md"
 fi
 
+#       --variable theme:solarized \
 pandoc --standalone \
        --smart \
        --write=revealjs \
-       --slide-level=2 \
-       --variable theme:solarized \
+       --slide-level=1 \
+       --variable theme:moon \
        $1.md \
        --highlight-style=kate \
        --output $1.html
